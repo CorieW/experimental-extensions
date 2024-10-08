@@ -43,7 +43,7 @@ resources:
       runtime: nodejs14
       eventTrigger:
         eventType: providers/cloud.firestore/eventTypes/document.write
-        resource: projects/${param:PROJECT_ID}/databases/(default)/documents/users/{userId}
+        resource: projects/${param:PROJECT_ID}/databases/(default)/documents/${param:SCORE_COLLECTION_PATH}/{userId}
 
 params:
   - param: LOCATION
